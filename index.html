@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home | Nevada Cyber Club</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <div class="topbar">
+  <nav class="navbar">
+    <div class="navlogo">
+      <a href="index.html"><img class="navimg" src="images/cyberclub-logo-invert.png" alt="Nevada Cyber Club logo"></img></a>
+      <div class="navmobile">
+        <a class="hamburger" id="togglemenu" href="#!"><img src="images/hamburger.png" height="40px"><img></a>
+      </div>
+    </div>
+    <ul id="navbuttons" class="navbuttons">
+      <li class="navbutton"><a class="headerlink" href="index.html">Home</a></li>
+      <li class="navbutton"><a class="headerlink" href="competitions.html">Competitions</a></li>
+      <li class="navbutton"><a class="headerlink" href="schedule.html">Schedule</a></li>
+      <li class="navbutton"><a class="headerlink" href="about.html">About</a></li>
+    </ul>
+  </nav>
+  </div>
+  <div class="main">
+    <div class="top-banner">
+      <div class="top-fade-left"></div>
+      <div class="top-header">
+        <h1>Nevada Cyber Club</h1>
+        <h2>Meetings every Wednesday in LME 321</h2>
+      </div>
+      <div class="top-fade-right"></div>
+    </div>
+    <div class="backgroundim"></div>
+    <div class="section-info">
+      <h1 class="section">Club Activities</h1>
+      <div class="boxes" style="padding-top: 3em; padding-bottom: 3em;">
+        <div class="infobox">
+          <div><h2 style="color: #b0b3b5;">Cyber Competitions</h2>
+          Our cyber competition teams compete in national competitions every semester. Our flagship team, NCC-1701, has ranked first in the National Cyber League and competed in offline events such as Wicked6 and CyberSEED.</div>
+          <div class="learnmorebox"><a class="learnmore" href="competitions.html">Learn More</a></div>
+        </div>
+        <div class="infobox">
+          <div><h2 style="color: #b0b3b5;">Workshops</h2>
+          We hold hands-on workshops in UNR's Full Spectrum Cybersecurity Lab at least once a month. Stop by to learn about web penetration testing, reverse engineering, network scripting, and other cybersecurity topics.</div>
+          <div class="learnmorebox"><a class="learnmore" href="schedule.html#General Meetings">Learn More</a></div>
+        </div>
+        <div class="infobox">
+          <div><h2 style="color: #b0b3b5;">Cyber Clinics</h2>
+          We hold Cyber Clinics to help improve community cybersecurity practicies. We've held Cyber Clinics at the Reno Air Races, the Governor’s Mansion, and the Attorney General’s Office.</div>
+          <div class="learnmorebox"><a class="learnmore" href="schedule.html#Cyber Clinics">Learn More</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="meeting-info">
+      <h1 class="section">General Meetings</h1>
+      <div class="meeting-box">
+        <span>General meetings are held every other Wednesday at 7:00 PM, except on holidays. Our meeting location is UNR's Full Specturm Cybersecurity Lab, located in <a target="_blank" rel="noopener noreferrer" title="See it on Google Maps (opens in a new tab)" href="https://goo.gl/maps/2oouMZwek8TXUJYL8">LME 321</a>. We use the lab computers for workshops and activities. The computers are not on the NetID system; please request an account at one of the general meetings.</span>
+      </div>
+    </div>
+    <h1 class="section primary">Contribute</h1>
+    <div class="boxes" style="padding-top: 3em; padding-bottom: 3em;">
+      <div class="infobox">
+        <div><h2>Workshops</h2>
+        <span style="color:black">We host at least one workshop each month in the FSC Lab. If you have an idea for a workshop or would like to create materials for a workshop please <a href="mailto:nevadacyberclub@gmail.com">send us an email</a>.</span></div>
+      </div>
+      <div class="infobox">
+        <div><h2>Guest Speaking</h2>
+        <span style="color:black">If you are interested in speaking to the club at one of our general meetings, please <a href="mailto:nevadacyberclub@gmail.com">send us an email</a>.</span></div>
+      </div>
+      <div class="infobox">
+        <div><h2>Website</h2>
+        <span style="color:black">If anything on our website is innacurate, out-of-date, or contains typos, you can <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">open a pull request</a> on the website Github repository to correct the change.</span></div>
+      </div>
+    </div>
+    <div class="section-info">
+      <h1 class="section">People</h1>
+      <div class="boxes" style="padding-top: 3em; padding-bottom: 3em;">
+        <div class="infobox">
+          <div><h2 style="color: #b0b3b5;">Club Officers</h2>
+          President: Bryson Lingenfelter<br>
+          Vice President: Jay Thom<br>
+          Treasurer: Ian Grant<br>
+          Secretary: Chance Harrison<br><br>
+          <b>Contact: <a style="color: white" href="mailto:nevadacyberclub@gmail.com">nevadacyberclub@gmail.com</a></b>
+          </div>
+        </div>
+        <div class="infobox">
+          <div><h2 style="color: #b0b3b5;">Club Adviser</h2>
+          Adam Reed</div>
+        </div>
+        <div class="infobox">
+          <div><h2 style="color: #b0b3b5;">Competition Coach</h2>
+          Bill Doherty</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="script/jquery-3.4.1.min.js"></script>
+<script>
+(function($) {
+  $(function() {
+    $('#togglemenu').on('click', function() {
+      $("#navbuttons").toggle()
+    });
+  });
+})(jQuery);
+</script>
+</body>
+</html>

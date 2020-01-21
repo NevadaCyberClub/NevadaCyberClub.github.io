@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Schedule | Nevada Cyber Club</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <div class="topbar">
+  <nav class="navbar">
+    <div class="navlogo">
+      <a href="index.html"><img class="navimg" src="images/cyberclub-logo-invert.png" alt="Nevada Cyber Club logo"></img></a>
+      <div class="navmobile">
+        <a class="hamburger" id="togglemenu" href="#!"><img src="images/hamburger.png" height="40px"><img></a>
+      </div>
+    </div>
+    <ul id="navbuttons" class="navbuttons">
+      <li class="navbutton"><a class="headerlink" href="index.html">Home</a></li>
+      <li class="navbutton"><a class="headerlink" href="competitions.html">Competitions</a></li>
+      <li class="navbutton"><a class="headerlink" href="schedule.html">Schedule</a></li>
+      <li class="navbutton"><a class="headerlink" href="about.html">About</a></li>
+    </ul>
+  </nav>
+  </div>
+  <div class="main">
+    <h1>Schedule</h1>
+    <div style="margin: 0 auto;">
+    <iframe src="https://calendar.google.com/calendar/embed?src=people.unr.edu_1rcuc5tl88bojcsvdol303da50%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div class="section-info">
+      <h1 id="General Meetings" class="section">General Meetings and Workshops</h1>
+      <div class="leading-paragraph" style="color: white">
+      General meetings take place every other week. At general meetings, we host guest speakers, workshops, and break down recently disclosed vulnerabilities.
+      </div>
+      <div class="boxes" style="padding: 1em 0 1em 0;">
+        <div class="infobox">
+          <div><h2 style="color: #b0b3b5;">Past Guest Speakers</h2>
+          <ul>
+            <li>Shanna Rahming (State of Nevada)</li>
+            <li>Dan Manson (NCL)</li>
+            <li>Marcos Palacios (Fortinet)</li>
+            <li>Aaron Walker (UNR)</li>
+            <li>Shaun Rahmeyer (Nevada Office of Cyber Defense Coordination)</li>
+            <li>Tony Rucci</li>
+            <li>Brandon Peterson (DRI)</li>
+          </ul>
+          </div>
+        </div>
+        <div class="infobox">
+          <div><h2 style="color: #b0b3b5;">Past Workshops</h2>
+            <ul>
+              <li>Linux</li>
+              <li>Bash Scripting</li>
+              <li>SQL Injection and Timing Attacks</li>
+              <li>Web Penetration Testing</li>
+              <li>Regex</li>
+              <li>HTTP</li>
+              <li>Networking</li>
+              <li>Basic Reverse Engineering</li>
+            </ul>
+          </div>
+        </div>
+        <div class="infobox">
+          <div><h2 style="color: #b0b3b5;">Past Vulnerability Breakdowns</h2>
+            <ul>
+              <li>Zoom RCE</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding: 1em 0 1em 0;">
+      <h1 id="Activities">Activities</h1>
+      <div class="leading-paragraph">
+      Starting Spring 2020, any week we don't have a general meeting there will be an extended meeting (starting at 5:00) in which we will have a designated activiy for club members to work on individually or with others. Activities include reverse engineering challenges, wargames, and capture the flag competitions. We hope these meetings will be a fun way for club members to learn new skills<br><br>
+      Upcoming activities:
+      <ul>
+        <li>FSC-CTF (in-house CTF competition)</li>
+      </ul>
+      </div>
+    </div>
+    <div class="section-info" style="padding: 1em 0 1em 0;">
+      <h1 id="Cyber Clinics"  class="section">Cyber Clinics</h1>
+      <div class="leading-paragraph" style="color: white">
+      Cyber Clinics follow a “triage, treat, and train” methodology where trained “Cyber-Medics” provide personalized cyber-security guidance. The main objective of a Cyber Clinic is to teach people valuable techniques in cyber self-defense. Cyber Clinics provide a mutually beneficial value proposition; the “patients” learn how to improve their cyber self-defense, and student cyber-medics apply their cybersecurity knowledge and develop practical experience.<br><br>
+
+      Cyber Clinics have been on hold since 2018 but we are looking to start holding clinics again if there is sufficient interest. Past clinics have been held in the following locations:
+      <ul>
+        <li>Attorney General's Office</li>
+        <li>Governor's Mansion</li>
+        <li>UNR Knowledge Center</li>
+        <li>Reno Air Races</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  <script src="script/jquery-3.4.1.min.js"></script>
+  <script>
+  (function($) {
+    $(function() {
+      $('#togglemenu').on('click', function() {
+        $("#navbuttons").toggle()
+      });
+    });
+  })(jQuery);
+  </script>
+</body>
+</html>
