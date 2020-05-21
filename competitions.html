@@ -55,15 +55,57 @@
       <h1 class="section">Competition Results</h1>
       <h2 id="ncl" style="color: #b0b3b5;">National Cyber League</h2>
       <div class="yearboxes">
-        <button class="yearbox highlight" id="f19-btn" onclick='changeyear("f19")'>2019 Fall</button>
+        <button class="yearbox highlight" id="s20-btn" onclick='changeyear("s20")'>2020 Spring</button>
+        <button class="yearbox" id="f19-btn" onclick='changeyear("f19")'>2019 Fall</button>
         <button class="yearbox" id="s19-btn" onclick='changeyear("s19")'>2019 Spring</button>
         <button class="yearbox" id="f18-btn" onclick='changeyear("f18")'>2018 Fall</button>
         <button class="yearbox" id="s18-btn" onclick='changeyear("s18")'>2018 Spring</button>
         <button class="yearbox" id="s17-btn" onclick='changeyear("s17")'>2017 Spring</button>
       </div>
-      <div id="f19" class="boxes">
+      <div id="s20" class="boxes">
         <div class="resultsbox">
-          <h2 style="color: #b0b3b5;">Team</h2>
+          <h3>Team</h3>
+          <table>
+          <tr>
+            <th>Rank<br>(/925)</th><th>Team</th><th>Members</th>
+          </tr>
+          <tr>
+            <td>9.</td><td>NCC-HOG</td><td>Bryson Lingenfelter<br>Sara Davis<br>Nate Thom<br>Cameron Gibson<br>Dusty Barnes</td>
+          </tr>
+          <tr>
+            <td>10.</td><td>NCC-1701</td><td>Ignacio Astaburuaga<br>Chance Harrison<br>Jordan Andrieu<br>Clifford Richardson<br>Simon Shrestha</td>
+          </tr>
+          <tr>
+            <td>289.</td><td>NCC-74656</td><td>Ian Grant<br>Trish Ryan<br>Brooke Lanier<br>Yash Shah<br>Yohan Martinez<br>Andrew Flangas<br>Madelyn Klupfell</td>
+          </tr>
+          </table>
+        </div>
+        <div class="resultsbox">
+          <h3>Individual</h3>
+          <table>
+          <tr>
+            <th>Rank<br>(/5357)</th><th>Person</th>
+          </tr>
+          <tr><td>4.</td><td>Bryson Lingenfelter</td></tr>
+          <tr><td>12.</td><td>Ignacio Astaburuaga</td></tr>
+          <tr><td>65.</td><td>Chance Harrison</td></tr>
+          <tr><td>119.</td><td>Jordan Andrieu</td></tr>
+          <tr><td>252.</td><td>Ian Grant</td></tr>
+          <tr><td>272.</td><td>Clifford Richardson</td></tr>
+          <tr><td>284.</td><td>Sara Davis</td></tr>
+          <tr><td>347.</td><td>Simon Shrestha</td></tr>
+          <tr><td>371.</td><td>Trish Ryan</td></tr>
+          <tr><td>496.</td><td>Brooke Lanier</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Each results box after the first should have
+           style="display: none" to disable it until
+           clicked -->
+      <div id="f19" class="boxes" style="display: none">
+        <div class="resultsbox">
+          <h3>Team</h3>
           <table>
           <tr>
             <th>Rank<br>(/689)</th><th>Team</th><th>Members</th>
@@ -77,7 +119,7 @@
           </table>
         </div>
         <div class="resultsbox">
-          <h2 style="color: #b0b3b5;">Individual</h2>
+          <h3>Individual</h3>
           <table>
           <tr>
             <th>Rank<br>(/4149)</th><th>Person</th>
@@ -96,12 +138,9 @@
         </div>
       </div>
 
-      <!-- Each results box after the first should have
-           style="display: none" to disable it until
-           clicked -->
       <div id="s19" class="boxes" style="display: none">
         <div class="resultsbox">
-          <h2 style="color: #b0b3b5;">Team</h2>
+          <h3>Team</h3>
           <table>
           <tr>
             <th>Rank<br>(/510)</th><th>Team</th><th>Members</th>
@@ -112,7 +151,7 @@
           </table>
         </div>
         <div class="resultsbox">
-          <h2 style="color: #b0b3b5;">Individual</h2>
+          <h3>Individual</h3>
           <table>
           <tr>
             <th>Rank<br>(/2601)</th><th>Person</th>
@@ -130,7 +169,7 @@
 
       <div id="f18" class="boxes" style="display: none">
         <div class="resultsbox">
-          <h2 style="color: #b0b3b5;">Team</h2>
+          <h3>Team</h3>
           <table>
           <tr>
             <th>Rank<br>(/361)</th><th>Team</th><th>Members</th>
@@ -141,7 +180,7 @@
           </table>
         </div>
         <div class="resultsbox">
-          <h2 style="color: #b0b3b5;">Individual</h2>
+          <h3>Individual</h3>
           <table>
           <tr>
             <th>Rank<br>(/2450)</th><th>Person</th>
@@ -157,7 +196,7 @@
 
       <div id="s18" class="boxes" style="display: none">
         <div class="resultsbox">
-          <h2 style="color: #b0b3b5;">Team</h2>
+          <h3>Team</h3>
           <table>
           <tr>
             <th>Rank<br>(/256)</th><th>Team</th><th>Members</th>
@@ -171,7 +210,7 @@
           </table>
         </div>
         <div class="resultsbox">
-          <h2 style="color: #b0b3b5;">Individual</h2>
+          <h3>Individual</h3>
           <table>
           <tr>
             <th>Rank<br>(/1867)</th><th>Person</th>
@@ -192,7 +231,7 @@
 
       <div id="s17" class="boxes" style="display: none">
         <div class="resultsbox">
-          <h2 style="color: #b0b3b5;">Team</h2>
+          <h3>Team</h3>
           <table>
           <tr>
             <th>Rank<br>(/150)</th><th>Team</th><th>Members</th>
@@ -206,7 +245,7 @@
           </table>
         </div>
         <div class="resultsbox">
-          <h2 style="color: #b0b3b5;">Individual</h2>
+          <h3>Individual</h3>
           <table>
           <tr>
             <th>Rank<br>(/1874)</th><th>Person</th>
@@ -224,6 +263,24 @@
         </div>
       </div>
 
+      <h2 id="fasttrack" style="color: #b0b3b5;">SANS Cyber Fasttrack Spring 2020</h2>
+        <div class="boxes">
+          <div class="resultsbox">
+          <table>
+          <tr>
+            <th>Rank<br>(/3498)</th><th>Person</th>
+          </tr>
+          <tr><td>3.</td><td>Bryson Lingenfelter</td></tr>
+          <tr><td>5.</td><td>Edgaras Fyodorovas</td></tr>
+          <tr><td>358.</td><td>Jordan Andrieu</td></tr>
+          <tr><td>492.</td><td>Trish Ryan</td></tr>
+          <tr><td>594.</td><td>Chance Harrison</td></tr>
+          <tr><td>599.</td><td>Brooke Lanier</td></tr>
+          </table>
+          </div>
+        </div>
+      </div>
+
     </div>
     <script src="script/jquery-3.4.1.min.js"></script>
     <script>
@@ -236,7 +293,7 @@
     })(jQuery);
     </script>
     <script>
-      var currentYear = "f19";
+      var currentYear = "s20";
       function changeyear(newYear) {
         $(".highlight").removeClass("highlight") // jQuery to remove the highlight class from any elements that have it
         document.getElementById(currentYear).style.display = "none";

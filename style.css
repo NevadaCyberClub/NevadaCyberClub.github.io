@@ -194,8 +194,16 @@ h2 {
   font-size: 26px;
   margin: 6px 0 12px 0;
   font-weight: bold;
-  /*font-style: italic;*/
   font-style: italic;
+  text-align: center;
+}
+
+h3 {
+  color: #c8cccf;
+  font-family: Lato;
+  font-size: 20px;
+  margin: 6px 0 12px 0;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -318,7 +326,9 @@ a.learnmore {
   font-size: 20px;
   text-align: left;
 
-  margin-bottom: 2em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid white;
 }
 
 h2.press {
@@ -339,7 +349,7 @@ h2.press {
   align-items: center;
   flex-direction: column;
 
-  padding: 3em 0 3em 0;
+  padding: 0 0 3em 0;
 }
 
 table {
