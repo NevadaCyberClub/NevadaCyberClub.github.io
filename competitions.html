@@ -4,26 +4,35 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Competitions | Nevada Cyber Club</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico">
 </head>
 <body>
-  <div class="topbar">
-  <nav class="navbar">
-    <div class="navlogo">
-      <a href="index.html"><img class="navimg" src="images/cyberclub-logo-invert.png" alt="Nevada Cyber Club logo"></img></a>
-      <div class="navmobile">
-        <a class="hamburger" id="togglemenu" href="#!"><img src="images/hamburger.png" height="40px"><img></a>
-      </div>
+  <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-navy">
+    <a class="navbar-brand" href="#">
+      <img src="images/cyberclub-logo-invert.png" height="50" alt="Nevada Cyber Club logo"></img>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav" aria-controls="mainnav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainnav" style="max-width: 1000px;">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="competitions.html">Competitions <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="schedule.html">Schedule</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
     </div>
-    <ul id="navbuttons" class="navbuttons">
-      <li class="navbutton"><a class="headerlink" href="index.html">Home</a></li>
-      <li class="navbutton"><a class="headerlink" href="competitions.html">Competitions</a></li>
-      <li class="navbutton"><a class="headerlink" href="schedule.html">Schedule</a></li>
-      <li class="navbutton"><a class="headerlink" href="about.html">About</a></li>
-    </ul>
   </nav>
-  </div>
   <div class="main">
     <h1>Cyber Competitions</h1>
     <h2>What Are Cyber Competitions?</h2>
@@ -62,78 +71,95 @@
         <button class="yearbox" id="s18-btn" onclick='changeyear("s18")'>2018 Spring</button>
         <button class="yearbox" id="s17-btn" onclick='changeyear("s17")'>2017 Spring</button>
       </div>
-      <div id="s20" class="boxes">
-        <div class="resultsbox">
-          <h3>Team</h3>
-          <table>
-          <tr>
-            <th>Rank<br>(/925)</th><th>Team</th><th>Members</th>
-          </tr>
-          <tr>
-            <td>9.</td><td>NCC-HOG</td><td>Bryson Lingenfelter<br>Sara Davis<br>Nate Thom<br>Cameron Gibson<br>Dusty Barnes</td>
-          </tr>
-          <tr>
-            <td>10.</td><td>NCC-1701</td><td>Ignacio Astaburuaga<br>Chance Harrison<br>Jordan Andrieu<br>Clifford Richardson<br>Simon Shrestha</td>
-          </tr>
-          <tr>
-            <td>289.</td><td>NCC-74656</td><td>Ian Grant<br>Trish Ryan<br>Brooke Lanier<br>Yash Shah<br>Yohan Martinez<br>Andrew Flangas<br>Madelyn Klupfell</td>
-          </tr>
-          </table>
-        </div>
-        <div class="resultsbox">
-          <h3>Individual</h3>
-          <table>
-          <tr>
-            <th>Rank<br>(/5357)</th><th>Person</th>
-          </tr>
-          <tr><td>4.</td><td>Bryson Lingenfelter</td></tr>
-          <tr><td>12.</td><td>Ignacio Astaburuaga</td></tr>
-          <tr><td>65.</td><td>Chance Harrison</td></tr>
-          <tr><td>119.</td><td>Jordan Andrieu</td></tr>
-          <tr><td>252.</td><td>Ian Grant</td></tr>
-          <tr><td>272.</td><td>Clifford Richardson</td></tr>
-          <tr><td>284.</td><td>Sara Davis</td></tr>
-          <tr><td>347.</td><td>Simon Shrestha</td></tr>
-          <tr><td>371.</td><td>Trish Ryan</td></tr>
-          <tr><td>496.</td><td>Brooke Lanier</td></tr>
-          </table>
-        </div>
-      </div>
 
       <!-- Each results box after the first should have
            style="display: none" to disable it until
            clicked -->
-      <div id="f19" class="boxes" style="display: none">
+      <div id="s20" class="boxes">
         <div class="resultsbox">
           <h3>Team</h3>
-          <table>
-          <tr>
-            <th>Rank<br>(/689)</th><th>Team</th><th>Members</th>
-          </tr>
-          <tr>
-            <td>4.</td><td> NCC-1701</td><td>Edgaras Fyodorovas<br> Ignacio Astaburuaga<br> Ian Grant<br> Clifford Richardson<br> Jordan Andrieu<br> Andrew McIntyre</td>
-          </tr>
-          <tr>
-            <td>7.</td><td> NCC-74656</td><td>Bryson Lingenfelter<br> Chance Harrison<br> John Clough<br> Trish Ryan<br> Brooke Lanier<br> Andrew Flangas<br> Sara Davis</td>
-          </tr>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Rank<br>(/925)</th><th scope="col">Team</th><th scope="col">Members</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
+            <tr>
+              <th scope="row" class="lalign">9.</th><td>NCC-HOG</td><td>Bryson Lingenfelter<br>Sara Davis<br>Nate Thom<br>Cameron Gibson<br>Dusty Barnes</td>
+            </tr>
+            <tr>
+              <th scope="row" class="lalign">10.</th><td>NCC-1701</td><td>Ignacio Astaburuaga<br>Chance Harrison<br>Jordan Andrieu<br>Clifford Richardson<br>Simon Shrestha</td>
+            </tr>
+            <tr>
+              <th scope="row" class="lalign">289.</th><td>NCC-74656</td><td>Ian Grant<br>Trish Ryan<br>Brooke Lanier<br>Yash Shah<br>Yohan Martinez<br>Andrew Flangas<br>Madelyn Klupfell</td>
+            </tr>
+            </tbody>
           </table>
         </div>
         <div class="resultsbox">
           <h3>Individual</h3>
-          <table>
-          <tr>
-            <th>Rank<br>(/4149)</th><th>Person</th>
-          </tr>
-          <tr><td>1.</td><td>Edgaras Fyodorovas</td></tr>
-          <tr><td>2.</td><td>Bryson Lingenfelter</td></tr>
-          <tr><td>32.</td><td>Ignacio Astaburuaga</td></tr>
-          <tr><td>123.</td><td>Ian Grant</td></tr>
-          <tr><td>231.</td><td>Clifford Richardson</td></tr>
-          <tr><td>370.</td><td>Jordan Andrieu</td></tr>
-          <tr><td>385.</td><td>Andrew McIntyre</td></tr>
-          <tr><td>538.</td><td>Chance Harrison</td></tr>
-          <tr><td>540.</td><td>John Clough</td></tr>
-          <tr><td>671.</td><td>Trish Ryan</td></tr>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Rank<br>(/5357)</th><th scope="col">Person</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
+            <tr><th scope="row" class="lalign">4.</th><td>Bryson Lingenfelter</td></tr>
+            <tr><th scope="row" class="lalign">12.</th><td>Ignacio Astaburuaga</td></tr>
+            <tr><th scope="row" class="lalign">65.</th><td>Chance Harrison</td></tr>
+            <tr><th scope="row" class="lalign">119.</th><td>Jordan Andrieu</td></tr>
+            <tr><th scope="row" class="lalign">252.</th><td>Ian Grant</td></tr>
+            <tr><th scope="row" class="lalign">272.</th><td>Clifford Richardson</td></tr>
+            <tr><th scope="row" class="lalign">284.</th><td>Sara Davis</td></tr>
+            <tr><th scope="row" class="lalign">347.</th><td>Simon Shrestha</td></tr>
+            <tr><th scope="row" class="lalign">371.</th><td>Trish Ryan</td></tr>
+            <tr><th scope="row" class="lalign">496.</th><td>Brooke Lanier</td></tr>
+          </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="f19" class="boxes" style="display: none">
+        <div class="resultsbox">
+          <h3>Team</h3>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th>Rank<br>(/689)</th><th>Team</th><th>Members</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
+            <tr>
+              <th scope="row" class="lalign">4.</th><td> NCC-1701</td><td>Edgaras Fyodorovas<br> Ignacio Astaburuaga<br> Ian Grant<br> Clifford Richardson<br> Jordan Andrieu<br> Andrew McIntyre</td>
+            </tr>
+            <tr>
+              <th scope="row" class="lalign">7.</th><td> NCC-74656</td><td>Bryson Lingenfelter<br> Chance Harrison<br> John Clough<br> Trish Ryan<br> Brooke Lanier<br> Andrew Flangas<br> Sara Davis</td>
+            </tr>
+          </tbody>
+          </table>
+        </div>
+        <div class="resultsbox">
+          <h3>Individual</h3>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th>Rank<br>(/4149)</th><th>Person</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
+            <tr><th scope="row" class="lalign">1.</th><td>Edgaras Fyodorovas</td></tr>
+            <tr><th scope="row" class="lalign">2.</th><td>Bryson Lingenfelter</td></tr>
+            <tr><th scope="row" class="lalign">32.</th><td>Ignacio Astaburuaga</td></tr>
+            <tr><th scope="row" class="lalign">123.</th><td>Ian Grant</td></tr>
+            <tr><th scope="row" class="lalign">231.</th><td>Clifford Richardson</td></tr>
+            <tr><th scope="row" class="lalign">370.</th><td>Jordan Andrieu</td></tr>
+            <tr><th scope="row" class="lalign">385.</th><td>Andrew McIntyre</td></tr>
+            <tr><th scope="row" class="lalign">538.</th><td>Chance Harrison</td></tr>
+            <tr><th scope="row" class="lalign">540.</th><td>John Clough</td></tr>
+            <tr><th scope="row" class="lalign">671.</th><td>Trish Ryan</td></tr>
+          </tbody>
           </table>
         </div>
       </div>
@@ -141,28 +167,36 @@
       <div id="s19" class="boxes" style="display: none">
         <div class="resultsbox">
           <h3>Team</h3>
-          <table>
-          <tr>
-            <th>Rank<br>(/510)</th><th>Team</th><th>Members</th>
-          </tr>
-          <tr>
-            <td>1.</td><td> NCC-1701</td><td>Edgaras Fyodorovas<br>Bryson Lingenfelter<br>Ignacio Astaburuaga<br>Ian Grant<br>Chance Harrison<br>Jonathan Proehl</td>
-          </tr>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th>Rank<br>(/510)</th><th>Team</th><th>Members</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
+            <tr>
+              <th scope="row" class="lalign">1.</th><td> NCC-1701</td><td>Edgaras Fyodorovas<br>Bryson Lingenfelter<br>Ignacio Astaburuaga<br>Ian Grant<br>Chance Harrison<br>Jonathan Proehl</td>
+            </tr>
+          </tbody>
           </table>
         </div>
         <div class="resultsbox">
           <h3>Individual</h3>
-          <table>
-          <tr>
-            <th>Rank<br>(/2601)</th><th>Person</th>
-          </tr>
-          <tr><td>3.</td><td>Edgaras Fyodorovas</td></tr>
-          <tr><td>6.</td><td>Bryson Lingenfelter</td></tr>
-          <tr><td>43.</td><td>Ian Grant</td></tr>
-          <tr><td>183.</td><td>Ignacio Astaburuaga</td></tr>
-          <tr><td>188.</td><td>Chance Harrison</td></tr>
-          <tr><td>419.</td><td>Andrew McIntyre</td></tr>
-          <tr><td>821.</td><td>Jonathan Proehl</td></tr>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th>Rank<br>(/2601)</th><th>Person</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
+            <tr><th scope="row" class="lalign">3.</th><td>Edgaras Fyodorovas</td></tr>
+            <tr><th scope="row" class="lalign">6.</th><td>Bryson Lingenfelter</td></tr>
+            <tr><th scope="row" class="lalign">43.</th><td>Ian Grant</td></tr>
+            <tr><th scope="row" class="lalign">183.</th><td>Ignacio Astaburuaga</td></tr>
+            <tr><th scope="row" class="lalign">188.</th><td>Chance Harrison</td></tr>
+            <tr><th scope="row" class="lalign">419.</th><td>Andrew McIntyre</td></tr>
+            <tr><th scope="row" class="lalign">821.</th><td>Jonathan Proehl</td></tr>
+          </tbody>
           </table>
         </div>
       </div>
@@ -170,26 +204,33 @@
       <div id="f18" class="boxes" style="display: none">
         <div class="resultsbox">
           <h3>Team</h3>
-          <table>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th>Rank<br>(/361)</th><th>Team</th><th>Members</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
           <tr>
-            <th>Rank<br>(/361)</th><th>Team</th><th>Members</th>
-          </tr>
-          <tr>
-            <td>8.</td><td> NCC-1701</td><td>Bryson Lingenfelter<br>Ignacio Astaburuaga<br>Ian Grant<br>Chance Harrison<br>Jonathan Proehl</td>
+            <th scope="row" class="lalign">8.</th><td> NCC-1701</td><td>Bryson Lingenfelter<br>Ignacio Astaburuaga<br>Ian Grant<br>Chance Harrison<br>Jonathan Proehl</td>
           </tr>
           </table>
         </div>
         <div class="resultsbox">
           <h3>Individual</h3>
-          <table>
-          <tr>
-            <th>Rank<br>(/2450)</th><th>Person</th>
-          </tr>
-          <tr><td>14.</td><td>Bryson Lingenfelter</td></tr>
-          <tr><td>364.</td><td>Chance Harrison</td></tr>
-          <tr><td>372.</td><td>Ian Grant</td></tr>
-          <tr><td>375.</td><td>Ignacio Astaburuaga</td></tr>
-          <tr><td>708.</td><td>Jonathan Proehl</td></tr>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th>Rank<br>(/2450)</th><th>Person</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
+            <tr><th scope="row" class="lalign">14.</th><td>Bryson Lingenfelter</td></tr>
+            <tr><th scope="row" class="lalign">364.</th><td>Chance Harrison</td></tr>
+            <tr><th scope="row" class="lalign">372.</th><td>Ian Grant</td></tr>
+            <tr><th scope="row" class="lalign">375.</th><td>Ignacio Astaburuaga</td></tr>
+            <tr><th scope="row" class="lalign">708.</th><td>Jonathan Proehl</td></tr>
+          </tbody>
           </table>
         </div>
       </div>
@@ -197,34 +238,41 @@
       <div id="s18" class="boxes" style="display: none">
         <div class="resultsbox">
           <h3>Team</h3>
-          <table>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th>Rank<br>(/256)</th><th>Team</th><th>Members</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
           <tr>
-            <th>Rank<br>(/256)</th><th>Team</th><th>Members</th>
+            <th scope="row" class="lalign">2.</th><td> NCC-1701</td><td>Alexander Parr<br>Edgaras Fyodorovas<br>Bryson Lingenfelter<br>Houston Lucas<br>Tim Muller</td>
           </tr>
           <tr>
-            <td>2.</td><td> NCC-1701</td><td>Alexander Parr<br>Edgaras Fyodorovas<br>Bryson Lingenfelter<br>Houston Lucas<br>Tim Muller</td>
-          </tr>
-          <tr>
-            <td>57.</td><td> NCC-74656</td><td>Andrew McIntyre<br>Jared Knutson<br>Ian Grant<br>Jamie Poston</td>
+            <th scope="row" class="lalign">57.</th><td> NCC-74656</td><td>Andrew McIntyre<br>Jared Knutson<br>Ian Grant<br>Jamie Poston</td>
           </tr>
           </table>
         </div>
         <div class="resultsbox">
           <h3>Individual</h3>
-          <table>
-          <tr>
-            <th>Rank<br>(/1867)</th><th>Person</th>
-          </tr>
-          <tr><td>4.</td><td>Edgaras Fyodorovas</td></tr>
-          <tr><td>6.</td><td>Bryson Lingenfelter</td></tr>
-          <tr><td>11.</td><td>Alexander Parr</td></tr>
-          <tr><td>141.</td><td>Tim Muller</td></tr>
-          <tr><td>229.</td><td>Houston Lucas</td></tr>
-          <tr><td>278.</td><td>Ian Grant</td></tr>
-          <tr><td>281.</td><td>Arush Prashar</td></tr>
-          <tr><td>323.</td><td>Jamie Poston</td></tr>
-          <tr><td>594.</td><td>Andrew McIntyre</td></tr>
-          <tr><td>658.</td><td>Jonathan Proehl</td></tr>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th>Rank<br>(/1867)</th><th>Person</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
+            <tr><th scope="row" class="lalign">4.</th><td>Edgaras Fyodorovas</td></tr>
+            <tr><th scope="row" class="lalign">6.</th><td>Bryson Lingenfelter</td></tr>
+            <tr><th scope="row" class="lalign">11.</th><td>Alexander Parr</td></tr>
+            <tr><th scope="row" class="lalign">141.</th><td>Tim Muller</td></tr>
+            <tr><th scope="row" class="lalign">229.</th><td>Houston Lucas</td></tr>
+            <tr><th scope="row" class="lalign">278.</th><td>Ian Grant</td></tr>
+            <tr><th scope="row" class="lalign">281.</th><td>Arush Prashar</td></tr>
+            <tr><th scope="row" class="lalign">323.</th><td>Jamie Poston</td></tr>
+            <tr><th scope="row" class="lalign">594.</th><td>Andrew McIntyre</td></tr>
+            <tr><th scope="row" class="lalign">658.</th><td>Jonathan Proehl</td></tr>
+          </tbody>
           </table>
         </div>
       </div>
@@ -232,33 +280,41 @@
       <div id="s17" class="boxes" style="display: none">
         <div class="resultsbox">
           <h3>Team</h3>
-          <table>
-          <tr>
-            <th>Rank<br>(/150)</th><th>Team</th><th>Members</th>
-          </tr>
-          <tr>
-            <td>4.</td><td> NCC-1701</td><td>Alexander Parr<br>Houston Lucas<br>Jared Knutson<br>Houston Lucas<br>Ian Grant<br>Arush Prashar<br>Tim Muller<br>Megan Nilsen</td>
-          </tr>
-          <tr>
-            <td>53.</td><td> NCC-74656</td><td>Andrew McIntyre<br>Zach Tucker<br>Jamie Poston<br>Ryan Lunt<br>Jackson Melcher</td>
-          </tr>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th>Rank<br>(/150)</th><th>Team</th><th>Members</th>
+            </tr>
+          </thead>
+            <tbody class="table-light">
+            <tr>
+              <th scope="row" class="lalign">4.</th><td> NCC-1701</td><td>Alexander Parr<br>Houston Lucas<br>Jared Knutson<br>Houston Lucas<br>Ian Grant<br>Arush Prashar<br>Tim Muller<br>Megan Nilsen</td>
+            </tr>
+            <tr>
+              <th scope="row" class="lalign">53.</th><td> NCC-74656</td><td>Andrew McIntyre<br>Zach Tucker<br>Jamie Poston<br>Ryan Lunt<br>Jackson Melcher</td>
+            </tr>
+          </tbody>
           </table>
         </div>
         <div class="resultsbox">
           <h3>Individual</h3>
-          <table>
-          <tr>
-            <th>Rank<br>(/1874)</th><th>Person</th>
-          </tr>
-          <tr><td>35.</td><td>Alexander Parr</td></tr>
-          <tr><td>68.</td><td>Houston Lucas</td></tr>
-          <tr><td>83.</td><td>Jared Knutson</td></tr>
-          <tr><td>101.</td><td>Ian Grant</td></tr>
-          <tr><td>111.</td><td>Jamie Poston</td></tr>
-          <tr><td>160.</td><td>Tim Muller</td></tr>
-          <tr><td>201.</td><td>Arush Prashar</td></tr>
-          <tr><td>258.</td><td>Megan Nilsen</td></tr>
-          <tr><td>636.</td><td>Nick Bolling</td></tr>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th>Rank<br>(/1874)</th><th>Person</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
+            <tr><th scope="row" class="lalign">35.</th><td>Alexander Parr</td></tr>
+            <tr><th scope="row" class="lalign">68.</th><td>Houston Lucas</td></tr>
+            <tr><th scope="row" class="lalign">83.</th><td>Jared Knutson</td></tr>
+            <tr><th scope="row" class="lalign">101.</th><td>Ian Grant</td></tr>
+            <tr><th scope="row" class="lalign">111.</th><td>Jamie Poston</td></tr>
+            <tr><th scope="row" class="lalign">160.</th><td>Tim Muller</td></tr>
+            <tr><th scope="row" class="lalign">201.</th><td>Arush Prashar</td></tr>
+            <tr><th scope="row" class="lalign">258.</th><td>Megan Nilsen</td></tr>
+            <tr><th scope="row" class="lalign">636.</th><td>Nick Bolling</td></tr>
+          </tbody>
           </table>
         </div>
       </div>
@@ -267,28 +323,36 @@
         <div class="boxes">
           <div class="resultsbox">
           <h3>Spring</h3>
-          <table>
-          <tr>
-            <th>Rank<br>(/3498)</th><th>Person</th>
-          </tr>
-          <tr><td>3.</td><td>Bryson Lingenfelter</td></tr>
-          <tr><td>5.</td><td>Edgaras Fyodorovas</td></tr>
-          <tr><td>358.</td><td>Jordan Andrieu</td></tr>
-          <tr><td>492.</td><td>Trish Ryan</td></tr>
-          <tr><td>594.</td><td>Chance Harrison</td></tr>
-          <tr><td>599.</td><td>Brooke Lanier</td></tr>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Rank<br>(/3498)</th><th scope="col">Person</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
+            <tr><th scope="row" class="lalign">3.</th><td>Bryson Lingenfelter</td></tr>
+            <tr><th scope="row" class="lalign">5.</th><td>Edgaras Fyodorovas</td></tr>
+            <tr><th scope="row" class="lalign">358.</th><td>Jordan Andrieu</td></tr>
+            <tr><th scope="row" class="lalign">492.</th><td>Trish Ryan</td></tr>
+            <tr><th scope="row" class="lalign">594.</th><td>Chance Harrison</td></tr>
+            <tr><th scope="row" class="lalign">599.</th><td>Brooke Lanier</td></tr>
+          </tbody>
           </table>
           </div>
           <div class="resultsbox">
           <h3>Summer</h3>
-          <table>
-          <tr>
-            <th>Rank<br>(/1173)</th><th>Person</th>
-          </tr>
-          <tr><td>4.</td><td>Bryson Lingenfelter</td></tr>
-          <tr><td>9.</td><td>Edgaras Fyodorovas</td></tr>
-          <tr><td>105.</td><td>Sara Davis</td></tr>
-          <tr><td>355.</td><td>Simon Shrestha</td></tr>
+          <table class="table table-striped table-sm fit">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">Rank<br>(/1173)</th><th scope="col">Person</th>
+            </tr>
+          </thead>
+          <tbody class="table-light">
+            <tr><th scope="row" class="lalign">4.</th><td>Bryson Lingenfelter</td></tr>
+            <tr><th scope="row" class="lalign">9.</th><td>Edgaras Fyodorovas</td></tr>
+            <tr><th scope="row" class="lalign">105.</th><td>Sara Davis</td></tr>
+            <tr><th scope="row" class="lalign">355.</th><td>Simon Shrestha</td></tr>
+          </tbody>
           </table>
           </div>
         </div>
@@ -296,6 +360,7 @@
 
     </div>
     <script src="script/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script>
     (function($) {
       $(function() {

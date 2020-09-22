@@ -4,26 +4,35 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Schedule | Nevada Cyber Club</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico">
 </head>
 <body>
-  <div class="topbar">
-  <nav class="navbar">
-    <div class="navlogo">
-      <a href="index.html"><img class="navimg" src="images/cyberclub-logo-invert.png" alt="Nevada Cyber Club logo"></img></a>
-      <div class="navmobile">
-        <a class="hamburger" id="togglemenu" href="#!"><img src="images/hamburger.png" height="40px"><img></a>
-      </div>
+  <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-navy">
+    <a class="navbar-brand" href="#">
+      <img src="images/cyberclub-logo-invert.png" height="50" alt="Nevada Cyber Club logo"></img>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav" aria-controls="mainnav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainnav" style="max-width: 1000px;">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="competitions.html">Competitions</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="schedule.html">Schedule <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
     </div>
-    <ul id="navbuttons" class="navbuttons">
-      <li class="navbutton"><a class="headerlink" href="index.html">Home</a></li>
-      <li class="navbutton"><a class="headerlink" href="competitions.html">Competitions</a></li>
-      <li class="navbutton"><a class="headerlink" href="schedule.html">Schedule</a></li>
-      <li class="navbutton"><a class="headerlink" href="about.html">About</a></li>
-    </ul>
   </nav>
-  </div>
   <div class="main">
     <h1>Schedule</h1>
     <div style="margin: 0 auto;">
@@ -36,40 +45,49 @@
       General meetings take place every other week. At general meetings, we host guest speakers, workshops, and break down recently disclosed vulnerabilities.
       </div>
       <div class="boxes" style="padding: 1em 0 1em 0;">
-        <div class="infobox">
-          <div><h2 style="color: #b0b3b5;">Past Guest Speakers</h2>
-          <ul>
-            <li>Shanna Rahming (State of Nevada)</li>
-            <li>Dan Manson (NCL)</li>
-            <li>Marcos Palacios (Fortinet)</li>
-            <li>Aaron Walker (UNR)</li>
-            <li>Shaun Rahmeyer (Nevada Office of Cyber Defense Coordination)</li>
-            <li>Tony Rucci</li>
-            <li>Brandon Peterson (DRI)</li>
-          </ul>
+        <div class="card card-navy" style="width: 22rem;">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title fg-silver">Past Guest Speakers</h5>
+            <p class="card-text">
+              <ul class="text-white">
+                <li>Shanna Rahming (State of Nevada)</li>
+                <li>Dan Manson (NCL)</li>
+                <li>Marcos Palacios (Fortinet)</li>
+                <li>Aaron Walker (UNR)</li>
+                <li>Shaun Rahmeyer (Nevada Office of Cyber Defense Coordination)</li>
+                <li>Tony Rucci</li>
+                <li>Brandon Peterson (DRI)</li>
+              </ul>
+            </p>
           </div>
         </div>
-        <div class="infobox">
-          <div><h2 style="color: #b0b3b5;">Past Workshops</h2>
-            <ul>
-              <li>Linux</li>
-              <li>Bash Scripting</li>
-              <li>SQL Injection and Timing Attacks</li>
-              <li>Web Penetration Testing</li>
-              <li>Regex</li>
-              <li>HTTP</li>
-              <li>Networking</li>
-              <li>Basic Reverse Engineering</li>
-            </ul>
+        <div class="card card-navy" style="width: 22rem;">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title fg-silver">Past Workshops</h5>
+            <p class="card-text">
+              <ul class="text-white">
+                <li>Linux</li>
+                <li>Bash Scripting</li>
+                <li>SQL Injection and Timing Attacks</li>
+                <li>Web Penetration Testing</li>
+                <li>Regex</li>
+                <li>HTTP</li>
+                <li>Networking</li>
+                <li>Basic Reverse Engineering</li>
+              </ul>
+            </p>
           </div>
         </div>
-        <div class="infobox">
-          <div><h2 style="color: #b0b3b5;">Past Vulnerability Breakdowns</h2>
-            <ul>
-              <li>Zoom RCE</li>
-              <li>Cross-site Scripting in Google Translate, Microsoft Edge</li>
-              <li>Safari Webcam Hacking</li>
-            </ul>
+        <div class="card card-navy" style="width: 22rem;">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title fg-silver">Vulnerability Breakdowns</h5>
+            <p class="card-text">
+              <ul class="text-white">
+                <li>Zoom RCE</li>
+                <li>Cross-site Scripting in Google Translate, Microsoft Edge</li>
+                <li>Safari Webcam Hacking</li>
+              </ul>
+            </p>
           </div>
         </div>
       </div>
@@ -101,6 +119,7 @@
     </div>
   </div>
   <script src="script/jquery-3.4.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <script>
   (function($) {
     $(function() {
