@@ -4,26 +4,35 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Home | Nevada Cyber Club</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="favicon.ico">
 </head>
 <body>
-  <div class="topbar">
-  <nav class="navbar">
-    <div class="navlogo">
-      <a href="index.html"><img class="navimg" src="images/cyberclub-logo-invert.png" alt="Nevada Cyber Club logo"></img></a>
-      <div class="navmobile">
-        <a class="hamburger" id="togglemenu" href="#!"><img src="images/hamburger.png" height="40px"><img></a>
-      </div>
+  <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-navy">
+    <a class="navbar-brand" href="#">
+      <img src="images/cyberclub-logo-invert.png" height="50" alt="Nevada Cyber Club logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainnav" aria-controls="mainnav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainnav" style="max-width: 1000px;">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="competitions.html">Competitions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="schedule.html">Schedule</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
     </div>
-    <ul id="navbuttons" class="navbuttons">
-      <li class="navbutton"><a class="headerlink" href="index.html">Home</a></li>
-      <li class="navbutton"><a class="headerlink" href="competitions.html">Competitions</a></li>
-      <li class="navbutton"><a class="headerlink" href="schedule.html">Schedule</a></li>
-      <li class="navbutton"><a class="headerlink" href="about.html">About</a></li>
-    </ul>
   </nav>
-  </div>
   <div class="main">
     <div class="top-banner">
       <div class="top-fade-left"></div>
@@ -33,25 +42,86 @@
       </div>
       <div class="top-fade-right"></div>
     </div>
-    <div class="backgroundim"></div>
+
+    <div id="bannercarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#bannercarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bannercarousel" data-slide-to="1"></li>
+        <li data-target="#bannercarousel" data-slide-to="2"></li>
+        <li data-target="#bannercarousel" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="10000">
+          <img class="carouselim" src="images/old-banner.jpg">
+          <div class="imshadow"></div>
+          <div class="carousel-caption d-none d-sm-block">
+            <h5>NCC at the Reno Air Races</h5>
+            <p>Nevada Cyber Club holding a cyber clinic at the Reno Air Races in 2016</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img class="carouselim" src="images/NCC-1701.jpg">
+          <div class="imshadow"></div>
+          <div class="carousel-caption d-none d-sm-block">
+            <h5>NCC-1701</h5>
+            <p>Our Spring 2019 cyber competition team competeting in NCL.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img class="carouselim" src="images/biscuit.jpg">
+          <div class="imshadow"></div>
+          <div class="carousel-caption d-none d-sm-block">
+            <h5>Biscuit</h5>
+            <p>Official mascot of Nevada Cyber Club</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img class="carouselim" src="images/wicked6.jpg">
+          <div class="imshadow"></div>
+          <div class="carousel-caption d-none d-sm-block">
+            <h5>Wicked6</h5>
+            <p>NCC-1701 at the Luxor Esports Arena in Las Vegas for Wicked6 2019.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#bannercarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#bannercarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
     <div class="section-info">
       <h1 class="section">Club Activities</h1>
       <div class="boxes" style="padding-top: 3em; padding-bottom: 3em;">
-        <div class="infobox">
-          <div><h2 style="color: #b0b3b5;">Cyber Competitions</h2>
-          Our cyber competition teams compete in national competitions every semester. Our flagship team, NCC-1701, has ranked first in the National Cyber League and competed in offline events such as Wicked6 and CyberSEED.</div>
-          <div class="learnmorebox"><a class="learnmore" href="competitions.html">Learn More</a></div>
+
+        <div class="card card-navy" style="width: 33%; min-width: 20rem;">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title fg-silver">Cyber Competitions</h4>
+            <p class="card-text text-white">Our cyber competition teams compete in national competitions every semester. Our flagship team, NCC-1701, has ranked first in the National Cyber League and competed in offline events such as Wicked6 and CyberSEED.</p>
+            <a href="competitions.html" class="btn btn-white btn-50p mx-auto mt-auto">Learn more</a>
+          </div>
         </div>
-        <div class="infobox">
-          <div><h2 style="color: #b0b3b5;">Workshops</h2>
-          We hold hands-on workshops in UNR's Full Spectrum Cybersecurity Lab at least once a month. Stop by to learn about web penetration testing, reverse engineering, network scripting, and other cybersecurity topics.</div>
-          <div class="learnmorebox"><a class="learnmore" href="schedule.html#General Meetings">Learn More</a></div>
+
+        <div class="card card-navy" style="width: 33%; min-width: 20rem;">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title fg-silver">Workshops</h4>
+            <p class="card-text text-white">We hold hands-on workshops in UNR's Full Spectrum Cybersecurity Lab at least once a month. Stop by to learn about web penetration testing, reverse engineering, network scripting, and other cybersecurity topics.</p>
+            <a href="schedule.html#General Meetings" class="btn btn-white btn-50p mx-auto mt-auto">Learn more</a>
+          </div>
         </div>
-        <div class="infobox">
-          <div><h2 style="color: #b0b3b5;">Cyber Clinics</h2>
-          We hold Cyber Clinics to help improve community cybersecurity practicies. We've held Cyber Clinics at the Reno Air Races, the Governor’s Mansion, and the Attorney General’s Office.</div>
-          <div class="learnmorebox"><a class="learnmore" href="schedule.html#Cyber Clinics">Learn More</a></div>
+
+        <div class="card card-navy" style="width: 33%; min-width: 20rem;">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title fg-silver">Cyber Clinics</h4>
+            <p class="card-text text-white">We hold Cyber Clinics to help improve community cybersecurity practicies. We've held Cyber Clinics at the Reno Air Races, the Governor’s Mansion, and the Attorney General’s Office.</p>
+            <a href="schedule.html#Cyber Clinics" class="btn btn-white btn-50p mx-auto mt-auto">Learn more</a>
+          </div>
         </div>
+
       </div>
     </div>
     <div class="meeting-info">
@@ -63,46 +133,72 @@
     </div>
     <h1 class="section primary">Contribute</h1>
     <div class="boxes" style="padding-top: 3em; padding-bottom: 3em;">
-      <div class="infobox">
-        <div><h2>Workshops</h2>
-        <span style="color:black">We host at least one workshop each month in the FSC Lab. If you have an idea for a workshop or would like to create materials for a workshop please <a href="mailto:nevadacyberclub@gmail.com">send us an email</a>.</span></div>
+
+      <div class="card card-silver" style="width: 30%; min-width: 20rem;">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title fg-navy">Workshops</h4>
+          <p class="card-text">We host at least one workshop each month in the FSC Lab. Club members are encouraged to propose workshops or help others create workshop materials.
+          </p>
+        </div>
       </div>
-      <div class="infobox">
-        <div><h2>Guest Speaking</h2>
-        <span style="color:black">If you are interested in speaking to the club at one of our general meetings, please <a href="mailto:nevadacyberclub@gmail.com">send us an email</a>.</span></div>
+
+      <div class="card card-silver" style="width: 30%; min-width: 20rem;">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title fg-navy">Guest Speaking</h4>
+          <p class="card-text">If you are interested in speaking to the club at one of our general meetings, please <u><a class="text-dark" href="mailto:nevadacyberclub@gmail.com">send us an email</a></u>.
+          </p>
+        </div>
       </div>
-      <div class="infobox">
-        <div><h2>Website</h2>
-        <span style="color:black">Our website is open source, and <a href="https://github.com/NevadaCyberClub/NevadaCyberClub.github.io">hosted on Github</a>. If anything is innacurate, out-of-date, or contains typos, you can <a href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">open a pull request</a> on the website Github repository to propose a change.</span></div>
+
+      <div class="card card-silver" style="width: 30%; min-width: 20rem;">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title fg-navy">Website</h4>
+          <p class="card-text">Our website is open source, and <u><a class="text-dark" href="https://github.com/NevadaCyberClub/NevadaCyberClub.github.io">hosted on Github</a></u>. You can contribute changes by <u><a class="text-dark" href="https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request">opening a pull request</a></u> on the website Github repository.
+          </p>
+        </div>
       </div>
     </div>
+
     <div class="section-info">
       <h1 class="section">People</h1>
       <div class="boxes" style="padding-top: 3em; padding-bottom: 3em;">
-        <div class="infobox">
-          <div><h2 style="color: #b0b3b5;">Club Officers</h2>
-          President: Bryson Lingenfelter<br>
-          Vice President: Ignacio Astaburuaga<br>
-          Treasurer: Chance Harrison<br>
-          Secretary: Andrew Flangas<br><br>
+
+        <div class="card card-navy" style="width: 33%; min-width: 20rem;">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title fg-silver">Club Officers</h4>
+            <p class="card-text text-white">
+            President: Bryson Lingenfelter<br>
+            Vice President: Ignacio Astaburuaga<br>
+            Treasurer: Chance Harrison<br>
+            Secretary: Andrew Flangas<br><br>
+           </p>
           </div>
         </div>
-        <div class="infobox">
-          <div><h2 style="color: #b0b3b5;">Faculty</h2>
-          Club adviser: Shamik Sengupta<br>
-          Competition coach: Bill Doherty
+
+        <div class="card card-navy" style="width: 33%; min-width: 20rem;">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title fg-silver">Faculty</h4>
+            <p class="card-text text-white">
+            Club adviser: Shamik Sengupta<br>
+            Competition coach: Bill Doherty
+            </p>
           </div>
         </div>
-        <div class="infobox">
-          <div><h2 style="color: #b0b3b5;">Contact</h2>
+
+        <div class="card card-navy" style="width: 33%; min-width: 20rem;">
+          <div class="card-body d-flex flex-column">
+            <h4 class="card-title fg-silver">Contact</h4>
+            <p class="card-text text-white">
             Email: <a style="color: white" href="mailto:nevadacyberclub@gmail.com">nevadacyberclub@gmail.com</a><br>
             Slack:  <a style="color: white;" href="https://nevadacyberclub.slack.com/signup">nevadacyberclub.slack.com/signup</a>
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 <script src="script/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script>
 (function($) {
   $(function() {
