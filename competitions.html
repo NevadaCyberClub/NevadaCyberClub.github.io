@@ -64,7 +64,8 @@
       <h1 class="section">Competition Results</h1>
       <h2 id="ncl" style="color: #b0b3b5;">National Cyber League</h2>
       <div class="yearboxes">
-        <button class="yearbox highlight" id="f20-btn" onclick='changeyear("f20")'>2020 Fall</button>
+        <button class="yearbox highlight" id="s21-btn" onclick='changeyear("s21")'>2021 Spring</button>
+        <button class="yearbox" id="f20-btn" onclick='changeyear("f20")'>2020 Fall</button>
         <button class="yearbox" id="s20-btn" onclick='changeyear("s20")'>2020 Spring</button>
         <button class="yearbox" id="f19-btn" onclick='changeyear("f19")'>2019 Fall</button>
         <button class="yearbox" id="s19-btn" onclick='changeyear("s19")'>2019 Spring</button>
@@ -76,7 +77,49 @@
       <!-- Each results box after the first should have
            style="display: none" to disable it until
            clicked -->
-      <div id="f20" class="boxes">
+       <div id="s21" class="boxes">
+         <div class="resultsbox">
+           <h3>Team</h3>
+           <table class="table table-striped table-sm fit">
+           <thead class="thead-light">
+             <tr>
+               <th scope="col">Rank<br>(/922)</th><th scope="col">Team</th><th scope="col">Members</th>
+             </tr>
+           </thead>
+           <tbody class="table-light">
+               <th scope="row" class="lalign">9.</th><td>NCC-1701</td><td>Bryson Lingenfelter<br>Chance Harrison<br>Ignacio Astaburuaga<br>Yash Shah<br>Simon Shrestha<br>Aidan Vancil<br>Travis Dail</td>
+             </tr>
+             <tr>
+               <th scope="row" class="lalign">129.</th><td>NCC-74656</td><td>Trish Ryan<br>Marissa Floam<br>Lindsey Carraher<br>Sara Davis<br>Madelyn Klupfell</td>
+             </tr>
+             </tbody>
+           </table>
+         </div>
+         <div class="resultsbox">
+           <h3>Individual</h3>
+           <table class="table table-striped table-sm fit">
+           <thead class="thead-light">
+             <tr>
+               <th scope="col">Rank<br>(/4180)</th><th scope="col">Person</th>
+             </tr>
+           </thead>
+           <tbody class="table-light">
+             <tr><th scope="row" class="lalign">2.</th><td>Bryson Lingenfelter</td></tr>
+             <tr><th scope="row" class="lalign">138.</th><td>Chance Harrison</td></tr>
+             <tr><th scope="row" class="lalign">199.</th><td>Trish Ryan</td></tr>
+             <tr><th scope="row" class="lalign">330.</th><td>Ignacio Astaburuaga</td></tr>
+             <tr><th scope="row" class="lalign">348.</th><td>Yash Shah</td></tr>
+             <tr><th scope="row" class="lalign">373.</th><td>Simon Shrestha</td></tr>
+             <tr><th scope="row" class="lalign">396.</th><td>Aidan Vancil</td></tr>
+             <tr><th scope="row" class="lalign">416.</th><td>Travis Dail</td></tr>
+             <tr><th scope="row" class="lalign">762.</th><td>Marissa Floam</td></tr>
+             <tr><th scope="row" class="lalign">877.</th><td>Lindsey Carraher</td></tr>
+           </tbody>
+           </table>
+         </div>
+       </div>
+
+      <div id="f20" class="boxes" style="display: none">
         <div class="resultsbox">
           <h3>Team</h3>
           <table class="table table-striped table-sm fit">
@@ -415,7 +458,7 @@
     })(jQuery);
     </script>
     <script>
-      var currentYear = "f20";
+      var currentYear = "s21";
       function changeyear(newYear) {
         $(".highlight").removeClass("highlight") // jQuery to remove the highlight class from any elements that have it
         document.getElementById(currentYear).style.display = "none";
