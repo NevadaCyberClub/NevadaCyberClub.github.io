@@ -561,6 +561,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    #support-btn-mobile{
+      height: auto;
+    }
+}
+
 
 
 
