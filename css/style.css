@@ -527,3 +527,41 @@
 
 }
 
+
+
+.support-link-mobile {
+      display:none;
+}
+
+
+.support-link-mobile-hamburger{
+}
+
+@media (max-width: 768px) {
+    .support-link {
+        display: flex;           /* Use flexbox to center content */
+        align-items: center;     /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        margin: auto;            /* Center the box within the navbar */
+        width: 100%;             /* Optional: full-width button for mobile */
+        padding: 8px 0;          /* Adjust padding for centered alignment */
+    }
+}
+
+@media (max-width: 768px) {
+    .support-link-mobile{
+        display: flex;
+        margin-top: 20px;       
+    }
+}
+
+@media (max-width: 768px) {
+    .upport-link-mobile-hamburger{
+      display:none;    
+    }
+}
+
+
+
+
+
