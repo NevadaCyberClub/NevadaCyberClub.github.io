@@ -504,3 +504,26 @@
 .copyright a:hover {
     color: #0461cb !important;
 }
+
+
+
+.support-link {
+    background-color: #041e42;
+    color: white;
+    padding: 8px 24px; /* Increase padding to make the box larger */
+    border-radius: 5px;
+    display: inline-block;
+    height: 60%; /* Increase height relative to the navbar */
+    line-height: 1.5em; /* Adjust line height to vertically center text */
+    margin: auto 16px auto 0; /* Adds extra space to the right */
+    transition: background-color 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.support-link:hover {
+    background-color: #03316c; /* Slightly darker blue on hover */
+        color: #ccdbf0;
+
+}
+
