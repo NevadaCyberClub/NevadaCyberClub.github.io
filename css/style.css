@@ -90,6 +90,10 @@
     transition: .5s;
 }
 
+.header-text {
+    color: var(--primary);
+}
+
 .navbar .navbar-brand {
     position: absolute;
     padding: 0;
@@ -200,7 +204,7 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(74, 124, 170, 0.7), rgba(74, 124, 170, 0.7)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(74, 124, 170, 0.7), rgba(74, 124, 170, 0.7)), url(/img/carousel-1.jpg) center 25% no-repeat;
     background-size: cover;
 }
 
@@ -567,6 +571,54 @@
     }
 }
 
+/* Core Layout */
+.layout-container {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  min-height: 100vh;
+  padding-inline: 150px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  color: #ffffff;
+  padding: 20px;
+}
+
+.sidebar .nav-link {
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.sidebar .nav-link:hover {
+  background-color:#D3D3D3;
+  color: #002e62;
+  border-radius: 5px;
+  font-weight: bold;
+  text-shadow: 0.5px 0 0 currentColor;
+}
+
+.sidebar .nav-link.active {
+  background-color: #002e62;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0.5px 0 0 currentColor;
+}
+
+/* Main Panel Styling */
+.main-panel {
+  padding: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .layout-container {
+    grid-template-columns: 1fr; /* Stacks vertically on smaller screens */
+  }
+}
 
 
 
